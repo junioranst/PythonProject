@@ -12,4 +12,3 @@ for nota in notas:
     if quantidade > 0:
         print(f"{quantidade} nota(s) de R${nota}")
     valor %= nota
-#ola bonito
