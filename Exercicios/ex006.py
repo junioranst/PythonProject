@@ -1,0 +1,5 @@
+nome = input('Digite seu nome: ')
+print(nome.strip().upper())
+print(nome.strip().lower())
+print(f'O nome total tem {len(nome)- nome.count(' ')} letras.')
+print(f'O primeiro nome tem {nome.find(' ')} letras.' )
