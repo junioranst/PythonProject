@@ -37,10 +37,14 @@ def produtos_caros(vendas, valor_minimo):
             lista_caros.append(venda['produto'])
     return lista_caros
 
+
 def main():
-    print(f'O faturamento total foi de: {calcular_faturamento(vendas)}')
-    print(f'O produto mais vendido foi: {produto_mais_vendido(vendas)}')
-    print(f'O produto que gerou mais receita foi: {produto_maior_receita(vendas)}')
-    print(f'Os Produtos acima de R$1.000 sao: {produtos_caros(vendas, valor_minimo)}')
+    print(f'O faturamento total foi de:\n\033[1;97m- R${calcular_faturamento(vendas)}\033[m')
+    print(f'O produto mais vendido foi:\n\033[1;97m- {produto_mais_vendido(vendas)}\033[m')
+    nome, valor = produto_maior_receita(vendas)
+    print(f'O produto que gerou mais receita foi:\n\033[1;97m- {nome} com R${valor} no total\033[m')
+    print(f'Os Produtos acima de R$1.000 sao: ')
+    for produto in produtos_caros(vendas, valor_minimo):
+        print(f'\033[1;97m- {produto}\033[m')
 
 main()
