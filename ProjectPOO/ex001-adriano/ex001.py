@@ -24,21 +24,32 @@ class Biblioteca:
         titulo = input('Digite o titulo do livro: ').strip()
         autor = input('Digite o autor do livro: ').strip()
         ano = input('Digite o ano do livro: ').strip()
-        livro_novo = Livro(titulo, autor, ano)
 
-        self.livros.append(livro_novo)
-
+        self.livros.append(Livro(titulo, autor, ano))
 
     def listar_livros(self):
         for livro in self.livros:
             print(livro.titulo, livro.autor, livro.ano, livro.disponivel)
-
 
     def buscar_livro(self):
         busca = input('Digite o nome do livro: ').strip()
         for livro in self.livros:
             if livro.titulo.lower() == busca.lower():
                 print(livro.titulo, livro.autor, livro.ano , livro.disponivel)
+
+    def emprestar_livro(self):
+        busca = input('Digite o nome do livro: ').strip()
+        for livro in self.livros:
+            if livro.titulo.lower() == busca.lower():
+                if livro.disponivel:
+                    livro.emprestar()
+                    print(f'O livro {livro.titulo} foi emprestado com sucesso!')
+                else:
+                    print('O livro ja foi emprestado')
+                return
+        print('Livro nao encontrado')
+
+
 
 biblioteca = Biblioteca()
 
@@ -61,10 +72,12 @@ while True:
     elif escolha == '2':
         biblioteca.listar_livros()
 
+
     elif escolha == '3':
         biblioteca.buscar_livro()
 
     elif escolha == '4':
+        biblioteca.emprestar_livro()
 
 
     elif escolha == '5':
