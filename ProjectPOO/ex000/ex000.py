@@ -13,7 +13,7 @@ class carro:
         self.kilometragem += 7004
 
     def mensagem(self):
-        return f'o modelo do carro é {self.marca}, modelo {self.modelo} e percorreu {self.kilometragem} Km'
+        return f'A marca do carro é {self.marca}, modelo {self.modelo} e percorreu {self.kilometragem} Km'
 
 car1 = carro()
 car1.marca = 'Ferrari'
