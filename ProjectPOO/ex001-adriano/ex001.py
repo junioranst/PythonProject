@@ -39,8 +39,9 @@ class Biblioteca:
         busca = input('Digite o nome do livro: ').strip()
         for livro in self.livros:
             if livro.titulo.lower() == busca.lower():
-                print(f'Titulo: {livro.titulo} | Autor: {livro.autor} | Ano: {livro.ano} | '
-                      f'Livro: {'\033[1;32mDisponivel\033[m' if livro.disponivel else '\033[1;31mNao Disponivel\033[m'}')
+                print(f'Titulo: \033[1;97m{livro.titulo}\033[m | Autor: \033[1;97m{livro.autor}\033[m | Ano: '
+                      f'\033[1;97m{livro.ano}\033[m | 'f'Livro: {'\033[1;32mDisponivel\033[m' if livro.disponivel
+                else '\033[1;31mNao Disponivel\033[m'}')
                 return
         print(f'O livro {busca} nao foi encontrado na biblioteca')
 
