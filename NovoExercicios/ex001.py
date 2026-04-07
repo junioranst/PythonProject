@@ -8,7 +8,7 @@ vendas = [
 def calcular_faturamento(vendas):
     total = 0
     for venda in vendas:
-        total += venda['preco'] * venda['quantidade']
+        total += venda['preco'] * venda['quantidade'] #total = total + vendas
     return total
 
 def produto_mais_vendido(vendas):

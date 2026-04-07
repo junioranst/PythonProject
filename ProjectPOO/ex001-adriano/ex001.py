@@ -26,19 +26,26 @@ class Biblioteca:
         ano = input('Digite o ano do livro: ').strip()
 
         self.livros.append(Livro(titulo, autor, ano))
+        print(f'O livro {titulo} foi adicionado com sucesso na biblioteca!')
 
     def listar_livros(self):
         for livro in self.livros:
-            print(livro.titulo, livro.autor, livro.ano, livro.disponivel)
+            print(f'Titulo: \033[1;97m{livro.titulo}\033[m | Autor: \033[1;97m{livro.autor}\033[m | Ano: '
+                  f'\033[1;97m{livro.ano}\033[m | 'f'Livro: {'\033[1;32mDisponivel\033[m' if livro.disponivel 
+            else '\033[1;31mNao Disponivel\033[m' }')
+
 
     def buscar_livro(self):
         busca = input('Digite o nome do livro: ').strip()
         for livro in self.livros:
             if livro.titulo.lower() == busca.lower():
-                print(livro.titulo, livro.autor, livro.ano , livro.disponivel)
+                print(f'Titulo: {livro.titulo} | Autor: {livro.autor} | Ano: {livro.ano} | '
+                      f'Livro: {'\033[1;32mDisponivel\033[m' if livro.disponivel else '\033[1;31mNao Disponivel\033[m'}')
+                return
+        print(f'O livro {busca} nao foi encontrado na biblioteca')
 
     def emprestar_livro(self):
-        busca = input('Digite o nome do livro: ').strip()
+        busca = input('Digite o nome do livro que deseja emprestar: ').strip()
         for livro in self.livros:
             if livro.titulo.lower() == busca.lower():
                 if livro.disponivel:
@@ -46,6 +53,18 @@ class Biblioteca:
                     print(f'O livro {livro.titulo} foi emprestado com sucesso!')
                 else:
                     print('O livro ja foi emprestado')
+                return
+        print('Livro nao encontrado')
+
+    def devolver_livro(self):
+        busca = input('Digite o nome do livro que deseja devolver: ').strip()
+        for livro in self.livros:
+            if livro.titulo.lower() == busca.lower():
+                if not livro.disponivel:
+                    livro.devolver()
+                    print(f'O livro {livro.titulo} foi devolvido com sucesso!')
+                else:
+                    print('O livro ja foi devolvido')
                 return
         print('Livro nao encontrado')
 
@@ -59,19 +78,18 @@ def mostrar_menu():
     print("2. Listar livros")
     print("3. Buscar livro")
     print("4. Emprestar livro")
-    print("5. Sair")
+    print("5. Devolver livro")
+    print("6. Sair")
 
 while True:
     mostrar_menu()
-    escolha = input("Escolha uma opção (1-5): ")
+    escolha = (input('Escolha uma opção (1-6): '))
 
     if escolha == '1':
         biblioteca.adicionar_livros()
 
-
     elif escolha == '2':
         biblioteca.listar_livros()
-
 
     elif escolha == '3':
         biblioteca.buscar_livro()
@@ -79,8 +97,10 @@ while True:
     elif escolha == '4':
         biblioteca.emprestar_livro()
 
-
     elif escolha == '5':
+        biblioteca.devolver_livro()
+
+    elif escolha == '6':
         print("Saindo...")
         break
     else:
