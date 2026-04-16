@@ -1,0 +1,134 @@
+[
+    {
+        "titulo": "Arte da Guerra",
+        "autor": "Sun Tzu",
+        "ano": "1934",
+        "disponivel": true
+    },
+    {
+        "titulo": "1984",
+        "autor": "George Orwell",
+        "ano": "1949",
+        "disponivel": true
+    },
+    {
+        "titulo": "Dom Casmurro",
+        "autor": "Machado de Assis",
+        "ano": "1899",
+        "disponivel": false
+    },
+    {
+        "titulo": "O Pequeno Príncipe",
+        "autor": "Antoine de Saint-Exupéry",
+        "ano": "1943",
+        "disponivel": true
+    },
+    {
+        "titulo": "Harry Potter e a Pedra Filosofal",
+        "autor": "J.K. Rowling",
+        "ano": "1997",
+        "disponivel": true
+    },
+    {
+        "titulo": "O Senhor dos Anéis: A Sociedade do Anel",
+        "autor": "J.R.R. Tolkien",
+        "ano": "1954",
+        "disponivel": false
+    },
+    {
+        "titulo": "O Hobbit",
+        "autor": "J.R.R. Tolkien",
+        "ano": "1937",
+        "disponivel": true
+    },
+    {
+        "titulo": "A Revolução dos Bichos",
+        "autor": "George Orwell",
+        "ano": "1945",
+        "disponivel": true
+    },
+    {
+        "titulo": "O Código Da Vinci",
+        "autor": "Dan Brown",
+        "ano": "2003",
+        "disponivel": false
+    },
+    {
+        "titulo": "Crepúsculo",
+        "autor": "Stephenie Meyer",
+        "ano": "2005",
+        "disponivel": true
+    },
+    {
+        "titulo": "A Menina que Roubava Livros",
+        "autor": "Markus Zusak",
+        "ano": "2005",
+        "disponivel": true
+    },
+    {
+        "titulo": "Percy Jackson e o Ladrão de Raios",
+        "autor": "Rick Riordan",
+        "ano": "2005",
+        "disponivel": false
+    },
+    {
+        "titulo": "O Alquimista",
+        "autor": "Paulo Coelho",
+        "ano": "1988",
+        "disponivel": true
+    },
+    {
+        "titulo": "Capitães da Areia",
+        "autor": "Jorge Amado",
+        "ano": "1937",
+        "disponivel": false
+    },
+    {
+        "titulo": "Memórias Póstumas de Brás Cubas",
+        "autor": "Machado de Assis",
+        "ano": "1881",
+        "disponivel": true
+    },
+    {
+        "titulo": "It A Coisa",
+        "autor": "Stephen King",
+        "ano": "1986",
+        "disponivel": true
+    },
+    {
+        "titulo": "Drácula",
+        "autor": "Bram Stoker",
+        "ano": "1897",
+        "disponivel": false
+    },
+    {
+        "titulo": "Frankenstein",
+        "autor": "Mary Shelley",
+        "ano": "1818",
+        "disponivel": true
+    },
+    {
+        "titulo": "Jogos Vorazes",
+        "autor": "Suzanne Collins",
+        "ano": "2008",
+        "disponivel": true
+    },
+    {
+        "titulo": "O Nome do Vento",
+        "autor": "Patrick Rothfuss",
+        "ano": "2007",
+        "disponivel": false
+    },
+    {
+        "titulo": "Rainbow Six",
+        "autor": "Adriano",
+        "ano": "1998",
+        "disponivel": true
+    },
+    {
+        "titulo": "Senhor dos Aneis",
+        "autor": "Igor",
+        "ano": "2010",
+        "disponivel": false
+    }
+]

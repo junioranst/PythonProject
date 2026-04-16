@@ -1,5 +1,8 @@
-import requests
 from tkinter import *
+from tkinter import messagebox, simpledialog
+from tkinter.font import BOLD
+
+from customtkinter import *
 
 class Livro:
     def __init__(self,titulo,autor,ano,disponivel=True ):
@@ -110,31 +113,15 @@ biblioteca = Biblioteca()
         #print("Opção inválida, tente novamente.")
 
 #Tkinter
-janela = Tk()
+janela = CTk()
 janela.title('Biblioteca do Adriano')
+janela.geometry("900x550")
 
-titulobib =  Label(janela, text='Biblioteca Junioran')
-titulobib.grid(column=0, row=0)
+menu_lateral = CTkFrame(janela, width=200, corner_radius=0)
+menu_lateral.pack(side=LEFT, fill=Y, padx=0, pady=0)
 
-texto_orientacao = Label(janela, text='Menu')
-texto_orientacao.grid(column=0, row=1)
+CTkLabel(menu_lateral, text='Biblioteca', font=('Arial',30,BOLD)).pack(pady=30, padx=20)
 
-botao1 = Button(janela, text='Adicionar livro', command=biblioteca.adicionar_livros)
-botao1.grid(column=0, row=2)
-
-botao2 = Button(janela, text='Listar livros', command=biblioteca.listar_livros)
-botao2.grid(column=0, row=3)
-
-botao3 = Button(janela, text='Buscar livro', command=biblioteca.buscar_livro)
-botao3.grid(column=0, row=4)
-
-botao4 = Button(janela, text='Emprestar livro', command=biblioteca.emprestar_livro)
-botao4.grid(column=0, row=5)
-
-botao5 = Button(janela, text='Devolver livro', command=biblioteca.devolver_livro)
-botao5.grid(column=0, row=6)
-
-texto_retorno = Label(janela, text='')
-texto_retorno.grid(column=0, row=7)
+CTkButton(menu_lateral, text='Adicionar Livro').pack(pady=10)
 
 janela.mainloop()
