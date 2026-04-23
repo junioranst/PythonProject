@@ -1,0 +1,18 @@
+[
+    {
+        "nome": "Betania",
+        "cidade": "curvelo",
+        "quantidade": 10,
+        "emprestadas": 0,
+        "possuidores": []
+    },
+    {
+        "nome": "contagem",
+        "cidade": "bh",
+        "quantidade": 2,
+        "emprestadas": 1,
+        "possuidores": [
+            "1"
+        ]
+    }
+]
