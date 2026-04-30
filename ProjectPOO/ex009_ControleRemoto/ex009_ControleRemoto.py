@@ -76,20 +76,21 @@ while True:
     os.system('cls')
     c1.tela()
     comando = (input(f'< CH {c1.canal_atual + 1} >   - VOL {c1.volume_atual} +\n' )).strip()
-    if comando == '0':
-        break
+    match comando:
+        case  0:
+            break
 
-    elif comando == '@':
-        c1.liga_desliga()
+        case '@':
+            c1.liga_desliga()
 
-    elif comando == '+':
-        c1.aumentar_volume()
+        case '+':
+            c1.aumentar_volume()
 
-    elif comando == '-':
-        c1.diminuir_volume()
+        case '-':
+            c1.diminuir_volume()
 
-    elif comando == '>':
-        c1.avancar_canal()
+        case '>':
+            c1.avancar_canal()
 
-    elif comando == '<':
-        c1.retroceder_canal()
+        case '<':
+            c1.retroceder_canal()
